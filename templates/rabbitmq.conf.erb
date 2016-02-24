@@ -24,7 +24,7 @@
         "user": "<%= scope.lookupvar('sensu::rabbitmq_user') -%>",
       <%- end -%>
       <%- if host.has_key?('password') -%>
-        "password": <%= host['password'] -%>,
+        "password": "<%= host['password'] -%>",
       <%- elsif scope.lookupvar('sensu::rabbitmq_password') -%>
         "password": "<%= scope.lookupvar('sensu::rabbitmq_password') -%>",
       <%- end -%>
